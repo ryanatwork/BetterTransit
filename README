@@ -1,0 +1,3 @@
+BetterTransit is an iOS framework which retrieves and displays real-time bus arrival times. The framework is designed to be easily extendable to all kinds of real-time bus information systems. So far this framework has been successfully integrated with three different real-time bus systems in the United States and Singapore.
+
+In the spirit of sharing and improving public transit systems, this framework is now released to all developers under the MIT license. I will keep updating this framework and contributions are welcome as well.
