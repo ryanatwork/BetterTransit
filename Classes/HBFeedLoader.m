@@ -133,7 +133,13 @@
 		
 		if (tdCount > 1 && (tdCount-1)%3 == 2) {
 			// Check if the route id is valid
-			if ([[entry.routeId trim] isEqualToString:@""]) return;
+            NSString *routeId = [entry.routeId trim];
+			if ([routeId isEqualToString:@""]) return;
+            
+            // Change route id "ULA" and "ULB" to "UL"
+            if ([routeId isEqualToString:@"ULA"] || [routeId isEqualToString:@"ULB"]) {
+                entry.routeId = @"UL";
+            }
 			
 			// Check if this route already exists in time table
 			BOOL routeAlreadyExists = NO;
