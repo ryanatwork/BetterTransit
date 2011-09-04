@@ -10,7 +10,10 @@
 #import "BTRailViewController.h"
 #import "BTTransitDelegate.h"
 #import "BTRouteCell.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 @implementation BTRoutesViewController
 
@@ -40,8 +43,10 @@
 	self.routesToDisplay= [transit filterRoutes:transit.routesToDisplay];
 	self.sectionNames = [self.routesToDisplay objectForKey:@"SectionNames"];
 	[mainTableView reloadData];
-	
+
+#ifdef FLURRY_KEY
 	[FlurryAPI logEvent:@"DID_SHOW_ROUTES_VIEW"];
+#endif
 }
 
 

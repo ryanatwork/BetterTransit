@@ -7,7 +7,10 @@
 //
 
 #import "BTLocationManager.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 
 @implementation BTLocationManager
@@ -30,7 +33,8 @@ static BTLocationManager *sharedInstance = nil;
 
 - (id)init
 {
-	if (self = [super init]) {
+    self = [super init];
+	if (self) {
 		locationManager = [[CLLocationManager alloc] init];
 		[locationManager setDelegate:self]; // send location update to self
 		[locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
@@ -88,10 +92,13 @@ static BTLocationManager *sharedInstance = nil;
 														  userInfo:userInfo];
 	} else {
 		self.currentLocation = loc;
+        
+#ifdef FLURRY_KEY
 		[FlurryAPI setLatitude:loc.coordinate.latitude
 					 longitude:loc.coordinate.longitude
 			horizontalAccuracy:loc.horizontalAccuracy
 			  verticalAccuracy:loc.verticalAccuracy];
+#endif
 		
 		[[NSNotificationCenter defaultCenter] postNotificationName:kDidUpdateToLocationNotification
 															object:self

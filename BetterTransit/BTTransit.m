@@ -9,7 +9,6 @@
 #import "BTTransit.h"
 #import "BTStationList.h"
 #import "AppSettings.h"
-#import "FlurryAPI.h"
 
 
 @implementation BTTransit
@@ -24,7 +23,8 @@
 
 - (id)init
 {
-	if (self = [super init]) {
+    self = [super init];
+	if (self) {
 		routes = [[NSMutableArray alloc] initWithCapacity:NUM_ROUTES];
 		routesDict = [[NSMutableDictionary alloc] initWithCapacity:NUM_ROUTES];
 		routesToDisplay = nil;

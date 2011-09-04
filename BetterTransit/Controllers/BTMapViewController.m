@@ -10,7 +10,10 @@
 #import "BTAnnotation.h"
 #import "BTTransitDelegate.h"
 #import "BTLocationManager.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 @implementation BTMapViewController
 
@@ -60,8 +63,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	
+
+#ifdef FLURRY_KEY
 	[FlurryAPI logEvent:@"DID_SHOW_MAP_VIEW"];
+#endif
 	
 	// Observe notifications
 	[[NSNotificationCenter defaultCenter] addObserver:self 

@@ -7,7 +7,10 @@
 //
 
 #import "BTScheduleViewController.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 
 @implementation BTScheduleViewController
@@ -35,8 +38,10 @@
 {
 	[super viewWillAppear:animated];
 	
+#ifdef FLURRY_KEY
 	NSDictionary *flurryDict = [NSDictionary dictionaryWithObjectsAndKeys:route.routeId, @"routeID", nil];
 	[FlurryAPI logEvent:@"DID_SHOW_SCHEDULE" withParameters:flurryDict];
+#endif
 }
 
 

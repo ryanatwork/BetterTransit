@@ -14,9 +14,8 @@
 #import "BTRailViewController.h"
 #import "BTRouteCell.h"
 
-@interface BTTransitDelegate : NSObject <UIApplicationDelegate,
-										 UIAlertViewDelegate,
-										 UITabBarControllerDelegate>
+@interface BTTransitDelegate : NSObject
+<UIApplicationDelegate, UIAlertViewDelegate>
 {
 	UIWindow *window;
 	UITabBarController *tabBarController;
@@ -35,11 +34,5 @@
 - (BTScheduleViewController *)createScheduleViewController;
 - (BTRailViewController *)createRailViewController;
 - (BTRouteCell *)createRouteCellWithIdentifier:(NSString *)CellIdentifier;
-
-// App settings
-- (void)updateAppSettings;
-- (void)updateExpiryDate;
-- (void)downloadVideoAd;
-- (void)playVideoAd;
 
 @end

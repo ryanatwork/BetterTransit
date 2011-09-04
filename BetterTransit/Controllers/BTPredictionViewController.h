@@ -12,11 +12,10 @@
 #import "BTStation.h"
 #import "BTPredictionCell.h"
 #import "BTFeedLoader.h"
-#import "UIViewControllerWithAd.h"
 #import "EGORefreshTableHeaderView.h"
 
 
-@interface BTPredictionViewController : UIViewControllerWithAd
+@interface BTPredictionViewController : UIViewController
 <UITableViewDelegate, UITableViewDataSource, 
 BTFeedLoaderDelegate, EGORefreshTableHeaderDelegate>
 {
@@ -63,9 +62,5 @@ BTFeedLoaderDelegate, EGORefreshTableHeaderDelegate>
 - (void)startTimer;
 
 - (BTPredictionCell *)createNewCell;
-
-// Ad support
-- (NSUInteger)adZone;
-- (void)updateUI;
 
 @end

@@ -9,7 +9,10 @@
 #import "BTSearchViewController.h"
 #import "Utility.h"
 #import "BTTransitDelegate.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 @implementation BTSearchViewController
 
@@ -70,7 +73,10 @@
 {
 	[self.navigationController setNavigationBarHidden:YES animated:YES];
     [super viewWillAppear:animated];
+    
+#ifdef FLURRY_KEY
 	[FlurryAPI logEvent:@"DID_SHOW_SEARCH_VIEW"];
+#endif
 }
 
 

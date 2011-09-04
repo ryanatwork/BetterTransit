@@ -11,11 +11,13 @@
 #import "BTPredictionEntry.h"
 #import "BTTransitDelegate.h"
 #import "Utility.h"
-#import "FlurryAPI.h"
 #import "TitleViewLabel.h"
 #import "LoadingCell.h"
 #import "EnhancedDefaultCell.h"
 
+#ifdef FLURRY_KEY
+#import "FlurryAPI.h"
+#endif
 
 @implementation BTPredictionViewController
 
@@ -128,8 +130,10 @@
     [self checkBusArrival];
 	[self startTimer];
 	
+#ifdef FLURRY_KEY
 	NSDictionary *flurryDict = [NSDictionary dictionaryWithObjectsAndKeys:station.stationId, @"stopID", nil];
 	[FlurryAPI logEvent:@"DID_SHOW_PREDICTION_VIEW" withParameters:flurryDict];
+#endif
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -185,23 +189,6 @@
 	[timer release], timer = nil;
     [errorMessage release], errorMessage = nil;
     [super dealloc];
-}
-
-
-#pragma mark -
-#pragma mark Ad support
-
-- (NSUInteger)adZone
-{
-	return AD_ZONE_1;
-}
-
-- (void)updateUI
-{
-	CGRect contentFrame = self.view.bounds;
-	contentFrame.size.height -= adOffset;
-	mainTableView.frame = contentFrame;
-	backdrop.frame = contentFrame;
 }
 
 

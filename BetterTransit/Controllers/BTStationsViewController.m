@@ -11,7 +11,10 @@
 #import "BTLocationManager.h"
 #import "Utility.h"
 #import "AppSettings.h"
+
+#ifdef FLURRY_KEY
 #import "FlurryAPI.h"
+#endif
 
 @implementation BTStationsViewController
  
@@ -99,8 +102,10 @@
     [super viewWillAppear:animated];
 	[self refreshView];
 	self.viewIsShown = YES;
-	
+
+#ifdef FLURRY_KEY
 	[FlurryAPI logEvent:@"DID_SHOW_STATION_VIEW"];
+#endif
 	
 	// Observe notifications
 	[[NSNotificationCenter defaultCenter] addObserver:self 
@@ -222,8 +227,10 @@
 			}
 			addToFavsView.hidden = YES;
 			[self.navigationItem setRightBarButtonItem:locationUpdateButton animated:NO];
-			
+
+#ifdef FLURRY_KEY
 			[FlurryAPI logEvent:@"CLICKED_NEARBY"];
+#endif
 			break;
 		case 1:
 			self.stations = [transit filterStations:transit.favoriteStations];
@@ -243,8 +250,10 @@
 				[self.navigationItem setRightBarButtonItem:editButton animated:NO];
 			}
 			noNearbyStopsView.hidden = YES;
-			
+
+#ifdef FLURRY_KEY
 			[FlurryAPI logEvent:@"CLICKED_FAVS"];
+#endif
 			break;
 		default:
 			break;
