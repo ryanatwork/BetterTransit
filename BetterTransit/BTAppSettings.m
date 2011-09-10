@@ -1,15 +1,15 @@
 //
-//  AppSettings.m
+//  BTAppSettings.m
 //  BetterTransit
 //
 //  Created by Yaogang Lian on 1/21/11.
 //  Copyright 2011 Happen Next. All rights reserved.
 //
 
-#import "AppSettings.h"
+#import "BTAppSettings.h"
 
 
-@implementation AppSettings
+@implementation BTAppSettings
 
 
 + (NSString *)startupScreen

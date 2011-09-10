@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
 @protocol ListViewControllerDelegate <NSObject>
 - (void)setSelectedIndex:(NSUInteger)index forListName:(NSString *)name;
 @end
 
 
-@interface ListViewController : CustomUIViewController
+@interface ListViewController : BTUIViewController
 <UITableViewDelegate, UITableViewDelegate>
 {
 	UITableView *mainTableView;

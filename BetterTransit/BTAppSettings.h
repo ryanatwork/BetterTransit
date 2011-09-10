@@ -1,5 +1,5 @@
 //
-//  AppSettings.h
+//  BTAppSettings.h
 //  BetterTransit
 //
 //  Created by Yaogang Lian on 1/21/11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface AppSettings : NSObject {
+@interface BTAppSettings : NSObject {
 
 }
 

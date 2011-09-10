@@ -10,9 +10,9 @@
 #import "BTTransit.h"
 #import "BTStationCell.h"
 #import "BTPredictionViewController.h"
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
-@interface BTStationsViewController : CustomUIViewController
+@interface BTStationsViewController : BTUIViewController
 <UITableViewDelegate, UITableViewDataSource>
 {
 	BTTransit *transit;

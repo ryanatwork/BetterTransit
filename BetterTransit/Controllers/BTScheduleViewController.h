@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 #import "BTRoute.h"
 
 
-@interface BTScheduleViewController : CustomUIViewController 
+@interface BTScheduleViewController : BTUIViewController 
 {
 	BTRoute *route;
 	NSString *subrouteId;

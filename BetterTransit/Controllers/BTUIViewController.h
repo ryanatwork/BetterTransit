@@ -1,5 +1,5 @@
 //
-//  CustomUIViewController.h
+//  BTUIViewController.h
 //  BetterTransit
 //
 //  Created by Yaogang Lian on 9/5/10.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CustomUIViewController : UIViewController
+@interface BTUIViewController : UIViewController
 {
 	UIImageView *backdrop;
 }

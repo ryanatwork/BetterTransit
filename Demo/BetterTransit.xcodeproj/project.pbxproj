@@ -14,7 +14,6 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		8900627512FE20EA00771F01 /* HBFeedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8900627412FE20EA00771F01 /* HBFeedLoader.m */; };
-		890251F512F8401A00263645 /* CustomUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890251F312F8401A00263645 /* CustomUIViewController.m */; };
 		8902547C12F9765F00263645 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8902541B12F9765E00263645 /* 1.png */; };
 		8902547D12F9765F00263645 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8902541C12F9765E00263645 /* 10.png */; };
 		8902547E12F9765F00263645 /* 10_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8902541D12F9765E00263645 /* 10_small.png */; };
@@ -242,7 +241,6 @@
 		894083A914142AEF0097A836 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 8940839C14142AEF0097A836 /* NSString+Trim.m */; };
 		894083AA14142AEF0097A836 /* TitleViewLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8940839E14142AEF0097A836 /* TitleViewLabel.m */; };
 		894083AB14142AEF0097A836 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 894083A014142AEF0097A836 /* Utility.m */; };
-		895B5D031413DD060019DE0A /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B5D021413DD060019DE0A /* AppSettings.m */; };
 		898A1F3C14136BDD00D97479 /* station_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 898A1F3414136BDD00D97479 /* station_1.png */; };
 		898A1F3D14136BDD00D97479 /* station_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 898A1F3514136BDD00D97479 /* station_1@2x.png */; };
 		898A1F3E14136BDD00D97479 /* station_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 898A1F3614136BDD00D97479 /* station_2.png */; };
@@ -306,6 +304,8 @@
 		899EA3A312F70A8800831DBA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 899EA3A212F70A8800831DBA /* libxml2.dylib */; };
 		899EA3A512F70A8800831DBA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 899EA3A412F70A8800831DBA /* libz.1.2.3.dylib */; };
 		89B2C4B6141A372300BDE926 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B2C4B5141A372300BDE926 /* MobileCoreServices.framework */; };
+		89C430A4141B9049006088D2 /* BTAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C430A2141B9049006088D2 /* BTAppSettings.m */; };
+		89C431AC141B910B006088D2 /* BTUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C431AB141B910B006088D2 /* BTUIViewController.m */; };
 		89E88A211314769900283972 /* CGS_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E88A1F1314769900283972 /* CGS_white.png */; };
 		89E88A221314769900283972 /* CGS_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E88A201314769900283972 /* CGS_white@2x.png */; };
 		89E88A25131476BA00283972 /* CS_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E88A23131476BA00283972 /* CS_white@2x.png */; };
@@ -334,8 +334,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8900627312FE20EA00771F01 /* HBFeedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBFeedLoader.h; sourceTree = "<group>"; };
 		8900627412FE20EA00771F01 /* HBFeedLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBFeedLoader.m; sourceTree = "<group>"; };
-		890251F212F8401A00263645 /* CustomUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIViewController.h; sourceTree = "<group>"; };
-		890251F312F8401A00263645 /* CustomUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIViewController.m; sourceTree = "<group>"; };
 		8902529312F8584D00263645 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8902541B12F9765E00263645 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		8902541C12F9765E00263645 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
@@ -594,8 +592,6 @@
 		8940839E14142AEF0097A836 /* TitleViewLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewLabel.m; sourceTree = "<group>"; };
 		8940839F14142AEF0097A836 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		894083A014142AEF0097A836 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		895B5D011413DD060019DE0A /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
-		895B5D021413DD060019DE0A /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
 		898A1F3414136BDD00D97479 /* station_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = station_1.png; sourceTree = "<group>"; };
 		898A1F3514136BDD00D97479 /* station_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "station_1@2x.png"; sourceTree = "<group>"; };
 		898A1F3614136BDD00D97479 /* station_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = station_2.png; sourceTree = "<group>"; };
@@ -709,6 +705,10 @@
 		899EA3A212F70A8800831DBA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		899EA3A412F70A8800831DBA /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		89B2C4B5141A372300BDE926 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		89C430A2141B9049006088D2 /* BTAppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAppSettings.m; sourceTree = "<group>"; };
+		89C430A3141B9049006088D2 /* BTAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAppSettings.h; sourceTree = "<group>"; };
+		89C431AA141B910B006088D2 /* BTUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTUIViewController.h; sourceTree = "<group>"; };
+		89C431AB141B910B006088D2 /* BTUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUIViewController.m; sourceTree = "<group>"; };
 		89E88A1F1314769900283972 /* CGS_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CGS_white.png; sourceTree = "<group>"; };
 		89E88A201314769900283972 /* CGS_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CGS_white@2x.png"; sourceTree = "<group>"; };
 		89E88A23131476BA00283972 /* CS_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CS_white@2x.png"; sourceTree = "<group>"; };
@@ -753,8 +753,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				895B5D011413DD060019DE0A /* AppSettings.h */,
-				895B5D021413DD060019DE0A /* AppSettings.m */,
 				8902529312F8584D00263645 /* Settings.h */,
 				8900627312FE20EA00771F01 /* HBFeedLoader.h */,
 				8900627412FE20EA00771F01 /* HBFeedLoader.m */,
@@ -778,7 +776,6 @@
 				8940822E141426950097A836 /* BetterTransit */,
 				8940838C14142AEF0097A836 /* HATools */,
 				898A1F4414136BED00D97479 /* ThirdParty */,
-				899EA34312F708E300831DBA /* Controller */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -964,6 +961,8 @@
 				89408231141426950097A836 /* BTTransitDelegate.h */,
 				89408232141426950097A836 /* BTTransitDelegate.m */,
 				89408233141426950097A836 /* Constants.h */,
+				89C430A3141B9049006088D2 /* BTAppSettings.h */,
+				89C430A2141B9049006088D2 /* BTAppSettings.m */,
 				89408234141426950097A836 /* Controllers */,
 				89408251141426950097A836 /* Models */,
 				8940825C141426950097A836 /* Resources */,
@@ -1004,6 +1003,8 @@
 				8940824E141426950097A836 /* BTStationsViewController.h */,
 				8940824F141426950097A836 /* BTStationsViewController.m */,
 				89408250141426950097A836 /* BTStationsViewController.xib */,
+				89C431AA141B910B006088D2 /* BTUIViewController.h */,
+				89C431AB141B910B006088D2 /* BTUIViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1398,15 +1399,6 @@
 			path = YAJL;
 			sourceTree = "<group>";
 		};
-		899EA34312F708E300831DBA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				890251F212F8401A00263645 /* CustomUIViewController.h */,
-				890251F312F8401A00263645 /* CustomUIViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1700,7 +1692,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BetterTransitAppDelegate.m in Sources */,
-				890251F512F8401A00263645 /* CustomUIViewController.m in Sources */,
 				8900627512FE20EA00771F01 /* HBFeedLoader.m in Sources */,
 				898A205E14136BED00D97479 /* ASIAuthenticationDialog.m in Sources */,
 				898A205F14136BED00D97479 /* ASIDataCompressor.m in Sources */,
@@ -1739,7 +1730,6 @@
 				898A209D14136BED00D97479 /* CXMLNode_PrivateExtensions.m in Sources */,
 				898A209E14136BED00D97479 /* CXMLNode_XPathExtensions.m in Sources */,
 				898A209F14136BED00D97479 /* CTidy.m in Sources */,
-				895B5D031413DD060019DE0A /* AppSettings.m in Sources */,
 				894082BC141426950097A836 /* BTTransit.m in Sources */,
 				894082BD141426950097A836 /* BTTransitDelegate.m in Sources */,
 				894082BE141426950097A836 /* BTFeedLoader.m in Sources */,
@@ -1769,6 +1759,8 @@
 				894083A914142AEF0097A836 /* NSString+Trim.m in Sources */,
 				894083AA14142AEF0097A836 /* TitleViewLabel.m in Sources */,
 				894083AB14142AEF0097A836 /* Utility.m in Sources */,
+				89C430A4141B9049006088D2 /* BTAppSettings.m in Sources */,
+				89C431AC141B910B006088D2 /* BTUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

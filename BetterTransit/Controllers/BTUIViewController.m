@@ -1,15 +1,15 @@
 //
-//  CustomUIViewController.m
+//  BTUIViewController.m
 //  BetterTransit
 //
 //  Created by Yaogang Lian on 9/5/10.
 //  Copyright 2010 Happen Next. All rights reserved.
 //
 
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
 
-@implementation CustomUIViewController
+@implementation BTUIViewController
 
 @synthesize backdrop;
 

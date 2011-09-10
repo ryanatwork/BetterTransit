@@ -13,10 +13,10 @@
 #import "BTPredictionCell.h"
 #import "BTFeedLoader.h"
 #import "EGORefreshTableHeaderView.h"
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
 
-@interface BTPredictionViewController : CustomUIViewController
+@interface BTPredictionViewController : BTUIViewController
 <UITableViewDelegate, UITableViewDataSource, 
 BTFeedLoaderDelegate, EGORefreshTableHeaderDelegate>
 {

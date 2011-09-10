@@ -8,7 +8,7 @@
 
 #import "BTTransit.h"
 #import "BTStationList.h"
-#import "AppSettings.h"
+#import "BTAppSettings.h"
 
 
 @implementation BTTransit
@@ -203,24 +203,24 @@
 	[self.nearbyStations removeAllObjects];
 	
 	int maxNumberOfNearbyStops;
-	if ([[AppSettings maxNumNearbyStops] isEqualToString:@"No Limit"]) {
+	if ([[BTAppSettings maxNumNearbyStops] isEqualToString:@"No Limit"]) {
 		maxNumberOfNearbyStops = [self.stations count];
 	} else {
-		maxNumberOfNearbyStops = [[AppSettings maxNumNearbyStops] intValue];
+		maxNumberOfNearbyStops = [[BTAppSettings maxNumNearbyStops] intValue];
 	}
 	
 	double radius;
-	if ([[AppSettings nearbyRadius] isEqualToString:@"No Limit"]) {
+	if ([[BTAppSettings nearbyRadius] isEqualToString:@"No Limit"]) {
 		radius = 50000000;
 	} else {
 #ifdef METRIC_UNIT
-		NSRange rangeOfKm = [[AppSettings nearbyRadius] rangeOfString:@" km"];
-		radius = [[[AppSettings nearbyRadius] substringToIndex:rangeOfKm.location] doubleValue]*1000;
+		NSRange rangeOfKm = [[BTAppSettings nearbyRadius] rangeOfString:@" km"];
+		radius = [[[BTAppSettings nearbyRadius] substringToIndex:rangeOfKm.location] doubleValue]*1000;
 #endif
 
 #ifdef ENGLISH_UNIT
-		NSRange rangeOfMi = [[AppSettings nearbyRadius] rangeOfString:@" mi"];
-		radius = [[[AppSettings nearbyRadius] substringToIndex:rangeOfMi.location] doubleValue]*1609.344;
+		NSRange rangeOfMi = [[BTAppSettings nearbyRadius] rangeOfString:@" mi"];
+		radius = [[[BTAppSettings nearbyRadius] substringToIndex:rangeOfMi.location] doubleValue]*1609.344;
 #endif
 	}
 	

@@ -10,10 +10,10 @@
 #import "BTTransit.h"
 #import "BTStationCell.h"
 #import "BTPredictionViewController.h"
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
 
-@interface BTSearchViewController : CustomUIViewController 
+@interface BTSearchViewController : BTUIViewController 
 <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
 	BTTransit *transit;

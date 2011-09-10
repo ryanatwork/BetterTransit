@@ -10,7 +10,7 @@
 #import "BTTransitDelegate.h"
 #import "ListViewController.h"
 #import "Utility.h"
-#import "AppSettings.h"
+#import "BTAppSettings.h"
 
 #ifdef FLURRY_KEY
 #import "FlurryAPI.h"
@@ -114,17 +114,17 @@
 		switch (indexPath.row) {
 			case 0:
 				cell.textLabel.text = @"Startup Screen";
-				cell.detailTextLabel.text = [AppSettings startupScreen];
+				cell.detailTextLabel.text = [BTAppSettings startupScreen];
 				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 				break;
 			case 1:
 				cell.textLabel.text = @"Nearby Radius";
-				cell.detailTextLabel.text = [AppSettings nearbyRadius];
+				cell.detailTextLabel.text = [BTAppSettings nearbyRadius];
 				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 				break;
 			case 2:
 				cell.textLabel.text = @"Max No. of Nearby Stops";
-				cell.detailTextLabel.text = [AppSettings maxNumNearbyStops];
+				cell.detailTextLabel.text = [BTAppSettings maxNumNearbyStops];
 				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 				break;
 			default:
@@ -147,19 +147,19 @@
 		switch (indexPath.row) {
 			case 0:
 				controller.list = self.startupScreenOptions;
-				controller.selectedIndex = [self.startupScreenOptions indexOfObject:[AppSettings startupScreen]];
+				controller.selectedIndex = [self.startupScreenOptions indexOfObject:[BTAppSettings startupScreen]];
 				controller.title = @"Startup Screen";
 				controller.name = LIST_STARTUP_SCREEN;
 				break;
 			case 1:
 				controller.list = self.nearbyRadiusOptions;
-				controller.selectedIndex = [self.nearbyRadiusOptions indexOfObject:[AppSettings nearbyRadius]];
+				controller.selectedIndex = [self.nearbyRadiusOptions indexOfObject:[BTAppSettings nearbyRadius]];
 				controller.title = @"Nearby Radius";
 				controller.name = LIST_NEARBY_RADIUS;
 				break;
 			case 2:
 				controller.list = self.maxNumNearbyStopsOptions;
-				controller.selectedIndex = [self.maxNumNearbyStopsOptions indexOfObject:[AppSettings maxNumNearbyStops]];
+				controller.selectedIndex = [self.maxNumNearbyStopsOptions indexOfObject:[BTAppSettings maxNumNearbyStops]];
 				controller.title = @"Max Number of Stops";
 				controller.name = LIST_MAX_NUM_NEARBY_STOPS;
 				break;

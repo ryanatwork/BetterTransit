@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BTTransit.h"
-#import "CustomUIViewController.h"
+#import "BTUIViewController.h"
 
 
-@interface BTRoutesViewController : CustomUIViewController
+@interface BTRoutesViewController : BTUIViewController
 <UITableViewDelegate, UITableViewDataSource>
 {
 	BTTransit *transit;

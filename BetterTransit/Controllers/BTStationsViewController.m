@@ -10,7 +10,7 @@
 #import "BTTransitDelegate.h"
 #import "BTLocationManager.h"
 #import "Utility.h"
-#import "AppSettings.h"
+#import "BTAppSettings.h"
 
 #ifdef FLURRY_KEY
 #import "FlurryAPI.h"
@@ -51,7 +51,7 @@
 	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	segmentedControl.frame = CGRectMake(0, 0, 166, 30);
 	
-	NSString *s = [AppSettings startupScreen];
+	NSString *s = [BTAppSettings startupScreen];
 	if ([s isEqualToString:@"Favorites"]) {
 		[segmentedControl setSelectedSegmentIndex:1];
 	} else {
