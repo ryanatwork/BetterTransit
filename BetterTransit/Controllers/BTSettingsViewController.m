@@ -8,7 +8,7 @@
 
 #import "BTSettingsViewController.h"
 #import "BTTransitDelegate.h"
-#import "ListViewController.h"
+#import "HAListViewController.h"
 #import "Utility.h"
 #import "BTAppSettings.h"
 
@@ -143,7 +143,7 @@
 	
 	if (indexPath.section == 0)
 	{
-		ListViewController *controller = [[ListViewController alloc] init];
+		HAListViewController *controller = [[HAListViewController alloc] init];
 		switch (indexPath.row) {
 			case 0:
 				controller.list = self.startupScreenOptions;
