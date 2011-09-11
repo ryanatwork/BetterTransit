@@ -2,22 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SectionNames</key>
-	<array>
-		<string>UTS</string>
-		<string>CTS</string>
-	</array>
-	<key>UTS</key>
-	<array>
-		<string>NL</string>
-		<string>CGS</string>
-		<string>CS</string>
-		<string>G</string>
-		<string>UL</string>
-		<string>SHS</string>
-		<string>T</string>
-	</array>
-	<key>CTS</key>
+	<key>CAT</key>
 	<array>
 		<string>1A</string>
 		<string>1B</string>
@@ -35,6 +20,21 @@
 		<string>22</string>
 		<string>23</string>
 		<string>24</string>
+	</array>
+	<key>SectionNames</key>
+	<array>
+		<string>UTS</string>
+		<string>CAT</string>
+	</array>
+	<key>UTS</key>
+	<array>
+		<string>NL</string>
+		<string>CGS</string>
+		<string>CS</string>
+		<string>G</string>
+		<string>UL</string>
+		<string>SHS</string>
+		<string>T</string>
 	</array>
 </dict>
 </plist>
