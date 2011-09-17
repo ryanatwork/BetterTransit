@@ -8,6 +8,7 @@
 
 #import "BTTransitDelegate.h"
 #import "BTLocationManager.h"
+#import "BTAppSettings.h"
 #import "Utility.h"
 
 #ifdef FLURRY_KEY
@@ -55,15 +56,9 @@ void uncaughtExceptionHandler(NSException *exception) {
 	// Add the tab bar controller's current view as a subview of the window
     [self.window addSubview:tabBarController.view];
 	[self.window makeKeyAndVisible];
-    
-    UINavigationController *nc;
-	for (nc in tabBarController.viewControllers) {
-		nc.navigationBar.tintColor = COLOR_NAV_BAR_BG;
-    }
 	
-/* TODO fix me
 	// Show startup tab
-	NSString *tabTitle = [AppSettings startupScreen];
+	NSString *tabTitle = [BTAppSettings startupScreen];
 	if ([tabTitle isEqualToString:@"Nearby"] || [tabTitle isEqualToString:@"Favorites"]) {
 		tabTitle = @"Stops";
 	}
@@ -75,7 +70,6 @@ void uncaughtExceptionHandler(NSException *exception) {
 			[tabBarController setSelectedViewController:nc];
 		}
 	}
-*/
     
 #ifdef FLURRY_KEY
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
@@ -94,29 +88,6 @@ void uncaughtExceptionHandler(NSException *exception) {
 #endif
 	
 	return YES;
-}
-
-- (void)fadeSplashScreen
-{
-	UIImage* backImage = [UIImage imageNamed:@"Default.png"];
-	UIView* backView = [[UIImageView alloc] initWithImage:backImage];
-	backView.frame = window.bounds;
-	[window addSubview:backView];
-	
-	[UIView beginAnimations:@"CWFadeIn" context:(void*)backView];
-	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
-	[UIView setAnimationDuration:0.4f];
-	backView.alpha = 0;
-	backView.transform = CGAffineTransformMakeScale(5.0, 5.0);
-	[UIView commitAnimations];
-}
-
-- (void)animationDidStop:(NSString*)animationID finished:(NSNumber*)finished context:(void*)context
-{
-	UIView* backView = (UIView*)context;
-	[backView removeFromSuperview];
-	[backView release];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -142,7 +113,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 	UINavigationController *nc = (UINavigationController *)[tabBarController selectedViewController];
 	UIViewController *vc = [nc visibleViewController];
 	
-	if ( [vc isKindOfClass:[BTPredictionViewController class]] ) {
+	if ([vc isKindOfClass:[BTPredictionViewController class]]) {
 		BTPredictionViewController *c = (BTPredictionViewController *)vc;
 		[c checkBusArrival];
 		[c startTimer];
