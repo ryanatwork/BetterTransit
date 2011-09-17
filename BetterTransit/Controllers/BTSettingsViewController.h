@@ -10,7 +10,6 @@
 #import "BTTransit.h"
 #import "HAListViewController.h"
 
-
 @interface BTSettingsViewController : UIViewController
 <UITableViewDelegate, UITableViewDataSource, HAListViewControllerDelegate> 
 {
@@ -21,8 +20,5 @@
 @property (nonatomic, retain) NSArray *startupScreenOptions;
 @property (nonatomic, retain) NSArray *nearbyRadiusOptions;
 @property (nonatomic, retain) NSArray *maxNumNearbyStopsOptions;
-
-// Lists
-- (void)setSelectedIndex:(NSUInteger)index forListName:(NSString *)name;
 
 @end

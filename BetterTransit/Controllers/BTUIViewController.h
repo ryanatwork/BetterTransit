@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BTUIViewController : UIViewController
-{
-	UIImageView *backdrop;
+@interface BTUIViewController : UIViewController {
 }
 
 @property (nonatomic, retain) UIImageView *backdrop;

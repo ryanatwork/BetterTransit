@@ -35,10 +35,10 @@
 #define kCellHeight				22.0
 #define kLabelFontSize			17
 
-// List names
-#define LIST_STARTUP_SCREEN @"LIST_STARTUP_SCREEN"
-#define LIST_NEARBY_RADIUS @"LIST_NEARBY_RADIUS"
-#define LIST_MAX_NUM_NEARBY_STOPS @"LIST_MAX_NUM_NEARBY_STOPS"
+// List tags
+#define TAG_LIST_STARTUP_SCREEN 0
+#define TAG_LIST_NEARBY_RADIUS  1
+#define TAG_LIST_MAX_NUM_NEARBY_STOPS   2
 
 // Colors
 #define COLOR_AD_REMOVAL [UIColor colorWithRed:0.639 green:0.851 blue:1.0 alpha:1.0]

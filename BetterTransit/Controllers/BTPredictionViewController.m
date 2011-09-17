@@ -145,6 +145,25 @@
 
 
 #pragma mark -
+#pragma mark Ad support
+
+#ifdef SHOW_ADS
+- (NSUInteger)adZone
+{
+	return AD_ZONE_1;
+}
+
+- (void)updateUI
+{
+	CGRect contentFrame = self.view.bounds;
+	contentFrame.size.height -= adOffset;
+	mainTableView.frame = contentFrame;
+	backdrop.frame = contentFrame;
+}
+#endif
+
+
+#pragma mark -
 #pragma mark Memory management
 
 - (void)didReceiveMemoryWarning

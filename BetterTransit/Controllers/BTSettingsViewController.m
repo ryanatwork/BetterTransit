@@ -149,19 +149,19 @@
 				controller.list = self.startupScreenOptions;
 				controller.selectedIndex = [self.startupScreenOptions indexOfObject:[BTAppSettings startupScreen]];
 				controller.title = @"Startup Screen";
-				controller.name = LIST_STARTUP_SCREEN;
+				controller.tag = TAG_LIST_STARTUP_SCREEN;
 				break;
 			case 1:
 				controller.list = self.nearbyRadiusOptions;
 				controller.selectedIndex = [self.nearbyRadiusOptions indexOfObject:[BTAppSettings nearbyRadius]];
 				controller.title = @"Nearby Radius";
-				controller.name = LIST_NEARBY_RADIUS;
+				controller.tag = TAG_LIST_NEARBY_RADIUS;
 				break;
 			case 2:
 				controller.list = self.maxNumNearbyStopsOptions;
 				controller.selectedIndex = [self.maxNumNearbyStopsOptions indexOfObject:[BTAppSettings maxNumNearbyStops]];
 				controller.title = @"Max Number of Stops";
-				controller.name = LIST_MAX_NUM_NEARBY_STOPS;
+				controller.tag = TAG_LIST_MAX_NUM_NEARBY_STOPS;
 				break;
 			default:
 				break;
@@ -176,20 +176,35 @@
 #pragma mark -
 #pragma mark ListViewControllerDelegate methods
 
-- (void)setSelectedIndex:(NSUInteger)index forListName:(NSString *)name
+- (void)setSelectedIndex:(NSUInteger)index inList:(NSInteger)tag
 {
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	if ([name isEqualToString:LIST_STARTUP_SCREEN]) {
-		NSString *s = [self.startupScreenOptions objectAtIndex:index];
-		[prefs setObject:s forKey:KEY_STARTUP_SCREEN];
-	} else if ([name isEqualToString:LIST_NEARBY_RADIUS]) {
-		NSString *s = [self.nearbyRadiusOptions objectAtIndex:index];
-		[prefs setObject:s forKey:KEY_NEARBY_RADIUS];
-	} else if ([name isEqualToString:LIST_MAX_NUM_NEARBY_STOPS]) {
-		NSString *s = [self.maxNumNearbyStopsOptions objectAtIndex:index];
-		[prefs setObject:s forKey:KEY_MAX_NUM_NEARBY_STOPS];
-	}
+    switch (tag) {
+        case TAG_LIST_STARTUP_SCREEN:
+        {
+            NSString *s = [self.startupScreenOptions objectAtIndex:index];
+            [prefs setObject:s forKey:KEY_STARTUP_SCREEN];
+        }
+            break;
+            
+        case TAG_LIST_NEARBY_RADIUS:
+        {
+            NSString *s = [self.nearbyRadiusOptions objectAtIndex:index];
+            [prefs setObject:s forKey:KEY_NEARBY_RADIUS];
+        }
+            break;
+            
+        case TAG_LIST_MAX_NUM_NEARBY_STOPS:
+        {
+            NSString *s = [self.maxNumNearbyStopsOptions objectAtIndex:index];
+            [prefs setObject:s forKey:KEY_MAX_NUM_NEARBY_STOPS];
+        }
+            break;
+            
+        default:
+            break;
+    }
 	[prefs synchronize];
-}	
+}
 
 @end
