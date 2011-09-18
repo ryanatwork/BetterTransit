@@ -47,23 +47,6 @@
 #pragma mark -
 #pragma mark Memory management
 
-- (void)didReceiveMemoryWarning
-{
-	DLog(@">>> %s <<<", __PRETTY_FUNCTION__);
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload
-{
-	DLog(@">>> %s <<<", __PRETTY_FUNCTION__);
-	[super viewDidUnload];
-	
-	self.mainTableView = nil;
-}
-
 - (void)dealloc
 {
 	DLog(@">>> %s <<<", __PRETTY_FUNCTION__);
@@ -76,6 +59,27 @@
 
 #pragma mark -
 #pragma mark Table view methods
+
+- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section 
+{
+	int numberOfRows;
+    if (section == 0) {
+		numberOfRows = 3;
+	} else {
+		numberOfRows = [super tableView:tv numberOfRowsInSection:section];
+	}
+	
+	return numberOfRows;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section 
+{
+    if (section == 0) {
+        return @"Application Settings";
+    } else {
+        return [super tableView:tableView titleForHeaderInSection:section];
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
