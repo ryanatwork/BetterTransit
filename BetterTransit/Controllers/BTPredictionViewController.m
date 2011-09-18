@@ -156,9 +156,8 @@
 - (void)updateUI
 {
 	CGRect contentFrame = self.view.bounds;
-	contentFrame.size.height -= adOffset;
+	contentFrame.size.height -= self.adOffset;
 	mainTableView.frame = contentFrame;
-	backdrop.frame = contentFrame;
 }
 #endif
 

@@ -18,7 +18,6 @@
 
 @implementation BTSettingsViewController
 
-@synthesize mainTableView;
 @synthesize startupScreenOptions, nearbyRadiusOptions, maxNumNearbyStopsOptions;
 
 
@@ -30,10 +29,10 @@
     [super viewDidLoad];
 	
 	self.title = NSLocalizedString(@"Settings", @"");
+    
+    self.sectionOffset = 1;
 	
 	transit = [AppDelegate transit];
-	
-	mainTableView.backgroundColor = [UIColor clearColor];
 	
 	self.startupScreenOptions = [NSArray arrayWithObjects:@"Nearby", @"Favorites", @"Map", @"Routes", @"Search", nil];
 	self.maxNumNearbyStopsOptions = [NSArray arrayWithObjects:@"10", @"20", @"30", @"50", @"100", @"No Limit", nil];
@@ -68,8 +67,6 @@
 - (void)dealloc
 {
 	DLog(@">>> %s <<<", __PRETTY_FUNCTION__);
-	[mainTableView release], mainTableView = nil;
-	
 	[startupScreenOptions release], startupScreenOptions = nil;
 	[nearbyRadiusOptions release], nearbyRadiusOptions = nil;
 	[maxNumNearbyStopsOptions release], maxNumNearbyStopsOptions = nil;
@@ -77,38 +74,19 @@
 }
 
 
+#pragma mark -
 #pragma mark Table view methods
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
-{
-    return 3;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section 
-{
-	return nil;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	static NSString *CellIdentifier1 = @"SettingsCell1";
+	static NSString *BTSettingsCellIdentifier = @"BTSettingsCell";
 	
 	UITableViewCell *cell;
 	if (indexPath.section == 0)
 	{
-		cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+		cell = [tableView dequeueReusableCellWithIdentifier:BTSettingsCellIdentifier];
 		if (cell == nil) {
-			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier1] autorelease];
+			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:BTSettingsCellIdentifier] autorelease];
 		}
 		
 		switch (indexPath.row) {
@@ -132,7 +110,9 @@
 		}
 		
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	}
+	} else {
+        cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
 	
     return cell;
 }
@@ -170,6 +150,9 @@
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
+    else {
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 

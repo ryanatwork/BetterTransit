@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "BTTransit.h"
 #import "HAListViewController.h"
+#import "HAAboutViewController.h"
 
-@interface BTSettingsViewController : UIViewController
-<UITableViewDelegate, UITableViewDataSource, HAListViewControllerDelegate> 
+@interface BTSettingsViewController : HAAboutViewController
+<HAListViewControllerDelegate>
 {
 	BTTransit *transit;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *mainTableView;
 @property (nonatomic, retain) NSArray *startupScreenOptions;
 @property (nonatomic, retain) NSArray *nearbyRadiusOptions;
 @property (nonatomic, retain) NSArray *maxNumNearbyStopsOptions;
